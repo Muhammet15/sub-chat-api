@@ -14,6 +14,18 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
+Route::namespace('App\Http\Controllers\Api')->group(function () {
+    Route::post('/auth', 'AuthController@authControl');
 });
+
+
+Route::namespace('App\Http\Controllers\Api')->middleware('auth:sanctum')->group(function () {
+
+    Route::prefix('purchase')->group(function () {
+    });
+
+    Route::prefix('subscriptions')->group(function () {
+    });
+});
+
+
