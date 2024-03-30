@@ -11,11 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('users', function (Blueprint $table) {
+        Schema::create('subscription_plans', function (Blueprint $table) {
             $table->id();
-            $table->string('device_uuid')->unique();
-            $table->string('device_name');
-            $table->boolean('subscription_status')->default(false);
+            $table->string('name');
+            $table->integer('chat_limit')->unsigned();
+            $table->decimal('price', 8, 2);
             $table->timestamps();
         });
     }
@@ -25,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('subscription_plans');
     }
 };
