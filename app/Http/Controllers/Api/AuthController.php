@@ -4,26 +4,22 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Http\Requests\AuthRequest;
 use App\Models\User;
 use App\Traits\ApiResponse;
+use App\Http\Resources\AuthResource;
 class AuthController extends Controller
 {
     use ApiResponse;
-    public function authControl(Request $request)
+    public function authControl(AuthRequest $request)
     {
-        $device_uuid = $request->device_uuid;
-        $device_name = $request->device_name;
-
-        $user = User::firstOrNew(['device_uuid' => $device_uuid], [
-            'device_uuid' => $device_uuid,
-            'device_name' => $device_name
-        ]);
+        $validatedData = $request->validated();
+        $user = User::firstOrNew(['device_uuid' => $validatedData['device_uuid']], $validatedData);
         $user->save();
-
-        return response()->json([
-            'status' => 'success',
-            'data' => $user
+        return $this->successResponse(true, 'User device information processed successfully.',
+        [
+            'user_info'=>AuthResource::make($user),
+            'client_token'=>$user->createToken('client_token')->plainTextToken,
         ]);
-        // return $this->successResponse(true, 'Register OK', (object) []);
     }
 }

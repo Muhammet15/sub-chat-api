@@ -17,7 +17,6 @@ return new class extends Migration
             $table->string('device_name');
             $table->boolean('premium_status')->default(false);
             $table->integer('chat_credit')->default(0);
-            $table->rememberToken();
             $table->timestamps();
         });
     }
