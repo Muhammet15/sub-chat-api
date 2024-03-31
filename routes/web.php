@@ -18,3 +18,7 @@ Route::namespace('App\Http\Controllers\Web')->group(function () {
     Route::post('/', 'AuthController@showLoginFormPost')->name('admin.login');
 });
 
+
+Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function () {
+
+});
