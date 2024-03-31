@@ -27,7 +27,7 @@ class ChatController extends Controller
         $user = auth()->user();
         if ($user && $user->subscription_status) {
             if ($user->activeSubscription()->chat_credit <= 0) {
-                return $this->errorResponse(true, 'You have no remaining chat credits. Please purchase a subscription to continue chatting.');
+                return $this->errorResponse(false, 'You have no remaining chat credits. Please purchase a subscription to continue chatting.', [] , 422);
             }
             $chat = Chat::where('id', $request->chatId)->first();
             if (!$chat) {

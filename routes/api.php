@@ -27,8 +27,8 @@ Route::namespace('App\Http\Controllers\Api')->middleware('auth:sanctum')->group(
     });
 
     Route::prefix('chat')->group(function () {
-        Route::post('/', 'ChatController@chat');
-        Route::get('/list', 'ChatController@chatList');
+        Route::post('/', 'ChatController@chat')->name('api.chat.send');
+        Route::get('/list', 'ChatController@chatList')->name('api.chat.list');
 
     });
 });
