@@ -19,10 +19,10 @@ class SubscriptionController extends Controller
         $user = auth()->user();
         $validatedData = $request->validated();
         if ($user->subscription_status) {
-            return $this->errorResponse(true, 'User already has an active subscription. If you want to continue, please visit the subscription change page.', ['subscription_status' => 'negative']);
+            return $this->errorResponse(false, 'User already has an active subscription. If you want to continue, please visit the subscription change page.', ['subscription_status' => 'negative'] , 200);
         }
         if (!$this->validateReceipt($validatedData['receiptToken'])) { //Son gelen değer çift ise true tek ise false.
-            return $this->errorResponse(true, 'Invalid receipt token', ['subscription_status' => 'negative']);
+            return $this->errorResponse(false, 'Invalid receipt token', ['subscription_status' => 'negative']);
         }
         $product = SubscriptionProduct::findOrFail($validatedData['productId']);
         UserSubscription::Create(
@@ -53,7 +53,7 @@ class SubscriptionController extends Controller
         $user = auth()->user();
         $subscriptions = $user->subscriptions()->with('product')->get();
         if ($subscriptions->isEmpty()) {
-            return $this->errorResponse(true, 'User does not have an active subscription.',  $subscriptions);
+            return $this->errorResponse(false, 'User does not have an active subscription.',  $subscriptions);
         }
         return $this->successResponse(true, 'Subscription information retrieved successfully.', SubscriptionResource::collection($subscriptions));
     }

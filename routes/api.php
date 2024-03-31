@@ -21,12 +21,15 @@ Route::namespace('App\Http\Controllers\Api')->group(function () {
 
 Route::namespace('App\Http\Controllers\Api')->middleware('auth:sanctum')->group(function () {
 
-    Route::prefix('purchase')->group(function () {
+    Route::prefix('subscription')->group(function () {
         Route::post('/', 'SubscriptionController@purchase');
+        Route::get('/info', 'SubscriptionController@info');
     });
 
-    Route::prefix('subscriptions')->group(function () {
-        Route::get('/', 'SubscriptionController@info');
+    Route::prefix('chat')->group(function () {
+        Route::post('/', 'ChatController@chat');
+        Route::get('/list', 'ChatController@chatList');
+
     });
 });
 

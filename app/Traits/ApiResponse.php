@@ -35,7 +35,7 @@ trait ApiResponse
     public function errorResponse(bool $success, string $message, mixed $data = [], int $statusCode = null): JsonResponse
     {
         if (!$statusCode) {
-            $statusCode = $success ? Response::HTTP_OK : Response::HTTP_INTERNAL_SERVER_ERROR;
+            $statusCode = $success ? Response::HTTP_OK : Response::HTTP_UNPROCESSABLE_ENTITY;
         }
         if (!$message) {
             $message = Response::$statusTexts[$statusCode];

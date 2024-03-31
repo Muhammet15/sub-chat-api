@@ -15,13 +15,13 @@ class SubscriptionProductSeeder extends Seeder
     {
         SubscriptionProduct::create([
             'name' => 'Basic',
-            'chat_limit' => 100,
+            'chat_limit' => 20,
             'price' => 29.99,
         ]);
 
         SubscriptionProduct::create([
             'name' => 'Pro',
-            'chat_limit' => 500,
+            'chat_limit' => 50,
             'price' => 59.99,
         ]);
     }

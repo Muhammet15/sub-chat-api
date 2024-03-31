@@ -1,0 +1,75 @@
+{
+  "name": "zuck.js",
+  "version": "2.0.4",
+  "description": "A javascript library that lets you add stories EVERYWHERE.",
+  "homepage": "https://ramon.codes/projects/zuck.js",
+  "author": "Ramon Souza <me@ramon.codes> (https://ramon.codes)",
+  "main": "./dist/zuck.js",
+  "types": "./dist/index.d.ts",
+  "keywords": [
+    "stories",
+    "story",
+    "zuck",
+    "zuckerberg",
+    "facebook",
+    "instagram",
+    "snapchat",
+    "whatsapp",
+    "slider",
+    "modal",
+    "viewer",
+    "media",
+    "react",
+    "typescript"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ramonszo/zuck.js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ramonszo/zuck.js/issues"
+  },
+  "exports": {
+    ".": "./dist/zuck.js",
+    "./skins/facesnap": "./dist/skins/facesnap.css",
+    "./skins/snapgram": "./dist/skins/snapgram.css",
+    "./skins/snapssenger": "./dist/skins/snapssenger.css",
+    "./skins/vemdezap": "./dist/skins/vemdezap.css",
+    "./css": "./src/styles/index.css",
+    "./types": "./dist/types.d.ts"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.21.0",
+    "@babel/plugin-transform-runtime": "^7.21.0",
+    "@babel/preset-env": "^7.9.0",
+    "@babel/runtime": "^7.21.0",
+    "@typescript-eslint/eslint-plugin": "^5.53.0",
+    "@typescript-eslint/parser": "^5.53.0",
+    "babel-eslint": "^10.1.0",
+    "babel-loader": "^9.1.2",
+    "css-loader": "^6.7.3",
+    "css-minimizer-webpack-plugin": "^4.2.2",
+    "eslint": "8.7.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-sort-imports-es6-autofix": "^0.6.0",
+    "mini-css-extract-plugin": "^2.7.2",
+    "prettier": "^2.8.1",
+    "terser-webpack-plugin": "^5.3.6",
+    "ts-loader": "^9.4.2",
+    "typescript": "^4.9.5",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1",
+    "webpack-dev-server": "^4.11.1"
+  },
+  "scripts": {
+    "build:prod": "NODE_ENV=production webpack --mode production",
+    "build:dev": "NODE_ENV=development webpack --mode development",
+    "build": "npm run build:dev && npm run build:prod",
+    "dev": "webpack-dev-server --config=./webpack.config.js --mode production",
+    "tsc": "tsc --declaration true --emitDeclarationOnly true --outDir ./dist",
+    "lint": "eslint . --fix"
+  }
+}

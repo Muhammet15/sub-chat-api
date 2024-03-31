@@ -16,6 +16,10 @@ return new class extends Migration
             $table->string('device_uuid')->unique();
             $table->string('device_name');
             $table->boolean('subscription_status')->default(false);
+            $table->boolean('is_admin')->default(false);
+            $table->string('name')->nullable();
+            $table->string('email')->unique()->nullable();
+            $table->string('password')->nullable();
             $table->timestamps();
         });
     }

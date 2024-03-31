@@ -12,18 +12,18 @@ class UserSubscriptionSeeder extends Seeder
      */
     public function run()
     {
-        UserSubscription::create([
-            'user_id' => 1,
-            'product_id' => 1,
-            'start_date' => now(),
-            'end_date' => now()->addMonths(1),
-        ]);
+        // UserSubscription::create([
+        //     'user_id' => 1,
+        //     'product_id' => 1,
+        //     'start_date' => now(),
+        //     'end_date' => now()->addMonths(1),
+        // ]);
 
-        UserSubscription::create([
-            'user_id' => 2,
-            'product_id' => 2,
-            'start_date' => now(),
-            'end_date' => now()->addMonths(3),
-        ]);
+        // UserSubscription::create([
+        //     'user_id' => 2,
+        //     'product_id' => 2,
+        //     'start_date' => now(),
+        //     'end_date' => now()->addMonths(3),
+        // ]);
     }
 }

@@ -13,6 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::namespace('App\Http\Controllers\Web')->group(function () {
+    Route::get('/', 'AuthController@showLoginForm')->name('admin.login.form');
+    Route::post('/', 'AuthController@showLoginFormPost')->name('admin.login');
 });
+
