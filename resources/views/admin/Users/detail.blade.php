@@ -14,8 +14,8 @@
                             <div class="row">
                                 <div class="col-xl-6">
                                     <div class="form-group">
-                                        <label for="device_uid">Device uid</label>
-                                        <input type="text" class="form-control" id="device_uid" name="device_uid" value="{{$user->device_uid}}" placeholder="device uid" readonly>
+                                        <label for="device_uuid">Device uid</label>
+                                        <input type="text" class="form-control" id="device_uuid" name="device_uuid" value="{{$user->device_uuid}}" placeholder="device uid" readonly>
                                     </div>
                                 </div>
                                 <div class="col-xl-6">

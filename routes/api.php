@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::namespace('App\Http\Controllers\Api')->group(function () {
-    Route::post('/auth', 'AuthController@authControl');
+    Route::post('/auth', 'AuthController@authControl')->name('api.auth');
 });
 
 
