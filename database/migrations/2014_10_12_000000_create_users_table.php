@@ -21,6 +21,8 @@ return new class extends Migration
             $table->string('email')->unique()->nullable();
             $table->string('password')->nullable();
             $table->timestamps();
+
+            $table->index('device_uuid');
         });
     }
 

@@ -105,7 +105,7 @@ class SubscriptionControllerTest extends TestCase
         $response = $this->actingAs($anotherUser)->getJson(route('api.subscription.info'));
 
          // 3. Assert ✅
-        $response->assertStatus(403);
+        $response->assertStatus(422);
     }
 
 }

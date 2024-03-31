@@ -53,6 +53,8 @@ class Kernel extends HttpKernel
         'cache.headers' => \Illuminate\Http\Middleware\SetCacheHeaders::class,
         'can' => \Illuminate\Auth\Middleware\Authorize::class,
         'isAdmin' => \App\Http\Middleware\IsAdmin::class,
+        'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
+        'rate.limit' => \App\Http\Middleware\RateLimitMiddleware::class,
 
     ];
     /**

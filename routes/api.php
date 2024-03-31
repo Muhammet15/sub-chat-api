@@ -14,12 +14,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
 Route::namespace('App\Http\Controllers\Api')->group(function () {
     Route::post('/auth', 'AuthController@authControl')->name('api.auth');
 });
 
-
-Route::namespace('App\Http\Controllers\Api')->middleware('auth:sanctum')->group(function () {
+Route::middleware(['rate.limit', 'auth:sanctum'])->namespace('App\Http\Controllers\Api')->group(function () {
 
     Route::prefix('subscription')->group(function () {
         Route::post('/', 'SubscriptionController@purchase')->name('api.subscription.purchase');
@@ -29,7 +29,6 @@ Route::namespace('App\Http\Controllers\Api')->middleware('auth:sanctum')->group(
     Route::prefix('chat')->group(function () {
         Route::post('/', 'ChatController@chat')->name('api.chat.send');
         Route::get('/list', 'ChatController@chatList')->name('api.chat.list');
-
     });
 });
 

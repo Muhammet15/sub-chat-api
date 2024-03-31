@@ -18,7 +18,7 @@ class ChatController extends Controller
             $query->orderByDesc('created_at')->take(5);
         }])->get();
         if ($chats->isEmpty()) {
-            return $this->successResponse(true, 'User does not have any chat.', [] , 200 );
+            return $this->errorResponse(false, 'User does not have any chat.', [] , 422 );
         }
         return $this->successResponse(true, 'Chat information retrieved successfully.', ChatResource::collection($chats));
     }

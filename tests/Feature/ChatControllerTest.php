@@ -19,7 +19,7 @@ class ChatControllerTest extends TestCase
 
         $response = $this->actingAs($user)->getJson(route('api.chat.list'));
 
-        $response->assertStatus(200);
+        $response->assertStatus(422);
     }
 
     public function test_chat_list_with_chats()

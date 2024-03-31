@@ -20,6 +20,9 @@ return new class extends Migration
             $table->timestamp('end_date')->nullable();
             $table->boolean('status')->default(true);
             $table->timestamps();
+
+            $table->index('chat_credit');
+            $table->index('status');
         });
     }
 
