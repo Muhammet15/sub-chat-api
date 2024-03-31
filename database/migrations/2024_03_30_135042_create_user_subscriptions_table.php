@@ -15,8 +15,10 @@ return new class extends Migration
             $table->id();
             $table->foreignId('user_id')->constrained('users')->onDelete('cascade');
             $table->foreignId('product_id')->constrained('subscription_products')->onDelete('cascade');
+            $table->integer('chat_credit')->default(0);
             $table->timestamp('start_date')->nullable();
             $table->timestamp('end_date')->nullable();
+            $table->boolean('status')->default(true);
             $table->timestamps();
         });
     }

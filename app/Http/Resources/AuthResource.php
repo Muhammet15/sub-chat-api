@@ -4,7 +4,7 @@ namespace App\Http\Resources;
 
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
-
+use App\Http\Resources\SubscriptionResource;
 class AuthResource extends JsonResource
 {
     /**
@@ -18,9 +18,8 @@ class AuthResource extends JsonResource
             'id' => $this->id,
             'device_uuid' => $this->device_uuid,
             'device_name' => $this->device_name,
-            'subscription_status' => $this->premium ? 'premium' : 'non-premium',
-            'chat_credit' => $this->chat_credit,
-            // 'subscription_details' => $this->premium ? $this->subscription_details : null,
+            'subscription_status' => $this->subscription_status ? true : false,
+            'subscription_details' => SubscriptionResource::collection($this->subscriptions) ?? [] ,
         ];
     }
 }

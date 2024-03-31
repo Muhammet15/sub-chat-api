@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('subscription_products', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->integer('chat_limit')->unsigned();
+            $table->integer('chat_limit');
             $table->decimal('price', 8, 2);
             $table->timestamps();
         });

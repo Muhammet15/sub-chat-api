@@ -12,31 +12,12 @@ class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array<int, string>
-     */
     protected $fillable = [
-        'device_uuid',
-        'device_name',
-        'premium_status',
+        'device_uuid', 'device_name', 'subscription_status'
     ];
 
-    /**
-     * The attributes that should be hidden for serialization.
-     *
-     * @var array<int, string>
-     */
-    protected $hidden = [
-        'remember_token',
-    ];
-
-    /**
-     * The attributes that should be cast.
-     *
-     * @var array<string, string>
-     */
-    protected $casts = [
-    ];
+    public function subscriptions()
+    {
+        return $this->hasMany(UserSubscription::class);
+    }
 }

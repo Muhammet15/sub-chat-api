@@ -22,9 +22,11 @@ Route::namespace('App\Http\Controllers\Api')->group(function () {
 Route::namespace('App\Http\Controllers\Api')->middleware('auth:sanctum')->group(function () {
 
     Route::prefix('purchase')->group(function () {
+        Route::post('/', 'SubscriptionController@purchase');
     });
 
     Route::prefix('subscriptions')->group(function () {
+        Route::get('/', 'SubscriptionController@info');
     });
 });
 
