@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-
+use Illuminate\Database\Eloquent\Builder;
 class UserSubscription extends Model
 {
     use HasFactory;
@@ -18,5 +18,10 @@ class UserSubscription extends Model
     public function product()
     {
         return $this->belongsTo(SubscriptionProduct::class);
+    }
+
+    public function scopeActive(Builder $query): Builder
+    {
+        return $query->where('status', true);
     }
 }

@@ -22,8 +22,8 @@ Route::namespace('App\Http\Controllers\Api')->group(function () {
 Route::namespace('App\Http\Controllers\Api')->middleware('auth:sanctum')->group(function () {
 
     Route::prefix('subscription')->group(function () {
-        Route::post('/', 'SubscriptionController@purchase');
-        Route::get('/info', 'SubscriptionController@info');
+        Route::post('/', 'SubscriptionController@purchase')->name('api.subscription.purchase');
+        Route::get('/info', 'SubscriptionController@info')->name('api.subscription.info');
     });
 
     Route::prefix('chat')->group(function () {
