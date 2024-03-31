@@ -13,7 +13,7 @@ Not:
 
 Projede mvc mimarisini kullandım, git branchler üzerinden commitlerimi yaptım. Api testleri için postman kullandım ve postman collection'ı proje içerisinde klasörledim oradan ulaşabilirsiniz. Aynı zamanda exportladığım db yi de klasör' e ekledim. Test olarak feature yazdım controller' lara test i çalıştırdıktan sonra postman üzerinden de response görmek için php artisan migrate:fresh --seed yapabilirsiniz.
 
-Kullanılmasını beklediğiniz işlemlerden, sail işlemi eksiktir. Swagger yerine postman kullanılmış collection dosyaya eklenmiştir, Yajra Database kullanılmamıştır.
+Kullanılmasını beklediğiniz işlemlerden, laravel sail işlemi eksiktir. Swagger yerine postman kullanılmış collection dosyaya eklenmiştir, Yajra Database kullanılmamıştır.
 
 Panel:
 ![image](https://github.com/Muhammet15/chatgpt-api/assets/58929064/bae1d6d7-279d-4fbb-9473-d6825aa81e57)
