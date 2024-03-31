@@ -19,7 +19,7 @@
                                         <th>User Device uuid</th>
                                         <th>Product id</th>
                                         <th>Product name</th>
-                                        <th>Chat credit</th>
+                                        <th>Chat remaining credit</th>
                                         <th>Start date</th>
                                         <th>End date</th>
                                         <th>Status</th>
@@ -64,7 +64,7 @@
     @endif
     @endsection
     <footer class="footer text-center text-sm-left">
-        &copy; 2023   <span class="text-muted d-none d-sm-inline-block float-right">Tüm Hakları
+        &copy; 2023  Muhmmet <span class="text-muted d-none d-sm-inline-block float-right">Tüm Hakları Muhmmet
             Tarafından Saklıdır.</span>
     </footer>
 

@@ -27,5 +27,9 @@ class HomeController extends Controller
         $subscriptions = UserSubscription::all();
         return view('admin.subscriptions.list', compact('subscriptions'));
     }
-
+    public function userDetail($id)
+    {
+        $user = User::findOrFail($id);
+        return view('admin.users.detail', compact('user'));
+    }
 }

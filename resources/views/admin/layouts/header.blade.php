@@ -105,17 +105,17 @@
                 <ul class="metismenu left-sidenav-menu" id="side-nav">
 
                     <li>
-                        <a href="{{ route('admin.index') }}"><i class="mdi mdi-monitor"></i><span>Anasayfa</span></a>
+                        <a href="{{ route('admin.index') }}"><i class="mdi mdi-monitor"></i><span>Home</span></a>
                     </li>
 
-                    <li class="menu-title">Kullanıcı ve Abonelikler</li>
+                    <li class="menu-title">Users and Subscriptions</li>
 
                     <li>
-                        <a href="javascript: void(0);"><i class="mdi mdi-apps"></i><span>Kullanıcı ve Abonelikler</span><span
+                        <a href="javascript: void(0);"><i class="mdi mdi-apps"></i><span>Users and Subscriptions </span><span
                                 class="menu-arrow"><i class="mdi mdi-chevron-right"></i></span></a>
                         <ul class="nav-second-level" aria-expanded="false">
-                            <li><a href="{{ route('users.list') }}"><span>Kullanıcılar</span></a></li>
-                            <li><a href="{{ route('subscriptions.list') }}"><span>Abonelikler</span></a></li>
+                            <li><a href="{{ route('users.list') }}"><span>Users</span></a></li>
+                            <li><a href="{{ route('subscriptions.list') }}"><span>Subscriptions</span></a></li>
                         </ul>
                     </li>
 

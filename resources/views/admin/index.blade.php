@@ -21,7 +21,7 @@
             <!--end row-->
         </div><!-- container -->
         <footer class="footer text-center text-sm-left">
-            &copy; 2023 Muhammet <span class="text-muted d-none d-sm-inline-block float-right">Tüm Hakları
+            &copy; 2023 Muhammet <span class="text-muted d-none d-sm-inline-block float-right">Tüm Hakları Muhmmet
                 Tarafından Saklıdır.</span>
         </footer>
     </div>

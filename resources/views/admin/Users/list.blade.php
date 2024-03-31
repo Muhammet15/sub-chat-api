@@ -41,10 +41,12 @@
                                             </span>
                                         </td>
                                         <td>
-                                            {{-- <a href="{{route('users.sub.list',$user['id'])}}" class="btn btn-sm btn-success tippy-btn"
-                                                title="Kullanıcı Bilgileri" data-tippy-interactive="true">
+                                            @if (!$user['is_admin'])
+                                            <a href="{{route('users.detail',$user['id'])}}" class="btn btn-sm btn-success tippy-btn"
+                                                title="User and Subscription Detail" data-tippy-interactive="true">
                                                 <i class="dripicons-user-id" style="line-height: inherit;"></i>
-                                            </a> --}}
+                                            </a>
+                                            @endif
                                         </td>
                                     </tr>
                                     @endforeach
@@ -68,7 +70,7 @@
     @endif
     @endsection
     <footer class="footer text-center text-sm-left">
-        &copy; 2023   <span class="text-muted d-none d-sm-inline-block float-right">Tüm Hakları
+        &copy; 2023  Muhmmet  <span class="text-muted d-none d-sm-inline-block float-right">Tüm Hakları Muhmmet
             Tarafından Saklıdır.</span>
     </footer>
 
