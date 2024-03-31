@@ -1,4 +1,4 @@
-@extends('superadmin.layouts.master')
+@extends('admin.layouts.master')
 @section('title')
     Anasayfa
 @endsection
@@ -10,58 +10,8 @@
                 <div class="col-12">
                     <div class="card">
                         <div class="card-body new-user order-list">
-                            <div class="table-responsive">
-                                {{-- <table class="table table-hover mb-0">
-                                    <thead class="thead-light">
-                                        <tr>
-                                            <th class="border-top-0"></th>
-                                            <th class="border-top-0">Adı Soyadı</th>
-                                            <th class="border-top-0">Ülke</th>
-                                            <th class="border-top-0">Telefon</th>
-                                            <th class="border-top-0">E-Posta</th>
-                                            <th class="border-top-0">Telefon Onayı</th>
-                                            <th class="border-top-0">Aktif</th>
-                                            <th class="border-top-0">İşlem</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        @foreach ($newUsers as $user)
-                                        <tr>
-                                            <td>
-                                                <img class="rounded-circle" src="{{$user->image}}" alt="user">
-                                            </td>
-                                            <td>
-                                                {{ $user->name }}
-                                            </td>
-                                            <td>{{ $user->address->first()->country->name ?? null}}</td>
-                                            <td>{{ $user->phone }}</td>
-                                            <td>{{ $user->email }}</td>
-                                            <td>
-                                                @if ($user->phone_verified_at === null)
-                                                <span class="badge badge-boxed badge-soft-warning">Onay Bekliyor</span>
-                                                @else
-                                                <span class="badge badge-boxed badge-soft-success">Onaylandı</span>
-                                                @endif
-                                            </td>
-                                            <td>
-                                                <span class="badge badge-boxed badge-soft-success">Aktif</span>
-                                            </td>
-                                            <td>
-                                                {{-- <a href="{{route('users.edit',$user['id'])}}" class="btn btn-sm btn-success tippy-btn"
-                                                title="Kullanıcı Bilgileri" data-tippy-interactive="true">
-                                                <i class="fas fa-eye"></i>
-                                            </a> --}}
-                                            {{-- <a href="{{route('users.delete',$user['id'])}}"class="btn btn-sm btn-danger"
-                                            title="Kullanıcı Bilgileri" data-tippy-interactive="true">
-                                            <i class="fas fa-trash-alt"></i></a> --}}
-
-                                            </td>
-                                        </tr>
-                                        @endforeach
-                                    </tbody>
-                                </table> --}}
-
-                            </div>
+                            <h1 class="welcome-text">Hoşgeldiniz!</h1><br>
+                            <h4>Case için gerekli işlemlere soldaki menüden ulaşabilirsiniz.</h4>
                         </div>
                     </div>
                     <!--end card-->
@@ -78,6 +28,29 @@
     <!-- end page content -->
 @endsection
 @section('style')
+<style>
+    .container {
+    margin-top: 50px;
+}
+
+.card {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.welcome-text {
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+}
+
+</style>
 <link rel="shortcut icon" href="{{ asset('assets/images/logo-sm.png') }}">
 <link href="{{ asset('assets/plugins/jvectormap/jquery-jvectormap-2.0.2.css') }}" rel="stylesheet">
 

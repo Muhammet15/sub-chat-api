@@ -1,3 +1,3 @@
-@include('superadmin.layouts.header')
+@include('admin.layouts.header')
 @yield('body')
-@include('superadmin.layouts.footer')
+@include('admin.layouts.footer')

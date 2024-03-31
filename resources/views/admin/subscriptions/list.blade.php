@@ -15,37 +15,33 @@
                                 <thead>
                                     <tr>
                                         <th>Id</th>
-                                        <th>Name</th>
-                                        <th>Device uuid</th>
-                                        <th>Device name</th>
-                                        <th>Subscription</th>
-                                        <th>Admin</th>
-                                        <th>Process</th>
+                                        <th>User id</th>
+                                        <th>User Device uuid</th>
+                                        <th>Product id</th>
+                                        <th>Product name</th>
+                                        <th>Chat credit</th>
+                                        <th>Start date</th>
+                                        <th>End date</th>
+                                        <th>Status</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach ($users as  $user )
+                                    @foreach ($subscriptions as  $item )
                                     <tr>
-                                        <td>{{$user['id']}}</td>
-                                        <td>{{$user['name'] ?? '-'}}</td>
-                                        <td>{{$user['device_uuid']}}</td>
-                                        <td>{{$user['device_name']}}</td>
+                                        <td>{{$item->id}}</td>
+                                        <td>{{$item->user_id}}</td>
+                                        <td>{{$item->user->device_uuid}}</td>
+                                        <td>{{$item->product_id}}</td>
+                                        <td>{{$item->product->name}}</td>
+                                        <td>{{$item->chat_credit}}</td>
+                                        <td>{{$item->start_date}}</td>
+                                        <td>{{$item->end_date}}</td>
                                         <td>
-                                            <span class="badge badge-{{ $user['subscription_status'] ? 'success' : 'warning' }} light">
-                                                {{ $user['subscription_status'] ? 'Active' : 'Passive' }}
+                                            <span class="badge badge-{{ $item['status'] ? 'success' : 'warning' }} light">
+                                                {{ $item['status'] ? 'Active' : 'Passive' }}
                                             </span>
                                         </td>
-                                        <td>
-                                            <span class="badge badge-{{ $user['is_admin'] ? 'success' : 'warning' }} light">
-                                                {{ $user['is_admin'] ? 'Admin' : 'User' }}
-                                            </span>
-                                        </td>
-                                        <td>
-                                            {{-- <a href="{{route('users.sub.list',$user['id'])}}" class="btn btn-sm btn-success tippy-btn"
-                                                title="Kullanıcı Bilgileri" data-tippy-interactive="true">
-                                                <i class="dripicons-user-id" style="line-height: inherit;"></i>
-                                            </a> --}}
-                                        </td>
+
                                     </tr>
                                     @endforeach
 

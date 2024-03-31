@@ -14,11 +14,13 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::namespace('App\Http\Controllers\Web')->group(function () {
-    Route::get('/', 'AuthController@showLoginForm')->name('admin.login.form');
-    Route::post('/', 'AuthController@showLoginFormPost')->name('admin.login');
+    Route::get('/', 'AuthController@loginForm')->name('admin.login.form');
+    Route::post('/', 'AuthController@login')->name('admin.login');
 });
 
 
-Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function () {
-
+Route::namespace('App\Http\Controllers\Web')->prefix('admin')->middleware(['auth', 'isAdmin'])->group(function () {
+    Route::get('panel','HomeController@index')->name('admin.index');
+    Route::get('users','HomeController@userList')->name('users.list');
+    Route::get('subscriptions','HomeController@subscriptions')->name('subscriptions.list');
 });
