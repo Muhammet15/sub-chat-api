@@ -38,6 +38,10 @@ class ChatController extends Controller
                     'code' => uniqid(),
                     'is_active' => true,
                 ]);
+            }else {
+                if ($chat->user_id != $user->id) {
+                    return $this->errorResponse(false, 'You do not have permission to access this chat.');
+                }
             }
             $botResponse = $this->botMessage();
             $chat->messages()->create([

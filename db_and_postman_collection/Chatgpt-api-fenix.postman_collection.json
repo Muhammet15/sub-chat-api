@@ -1,0 +1,1133 @@
+{
+	"info": {
+		"_postman_id": "d3912ce5-bf89-4181-8552-641f5af2ad58",
+		"name": "Chatgpt-api-fenix",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "18532741",
+		"_collection_link": "https://lunar-eclipse-437040.postman.co/workspace/My-Workspace~0f440428-f4c3-4224-800a-53af0e0a8328/collection/18532741-d3912ce5-bf89-4181-8552-641f5af2ad58?action=share&source=collection_link&creator=18532741"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "auth",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "device_uuid",
+									"value": "123434",
+									"contentType": "",
+									"description": "string uuid",
+									"type": "text"
+								},
+								{
+									"key": "device_name",
+									"value": "Example-device-name33",
+									"description": "string name",
+									"type": "text"
+								}
+							]
+						},
+						"url": "{{base_url}}/api/auth"
+					},
+					"response": [
+						{
+							"name": "No plans",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "device_uuid",
+											"value": "1234",
+											"contentType": "",
+											"description": "string uuid",
+											"type": "text"
+										},
+										{
+											"key": "device_name",
+											"value": "Example-device-name",
+											"description": "string name",
+											"type": "text"
+										}
+									]
+								},
+								"url": "{{base_url}}/api/auth"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 31 Mar 2024 11:40:37 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 31 Mar 2024 11:40:37 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.20"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"code\": 200,\n    \"message\": \"User device information processed successfully.\",\n    \"data\": {\n        \"user_info\": {\n            \"id\": 1,\n            \"device_uuid\": \"1234\",\n            \"device_name\": \"Example-device-name\",\n            \"subscription_status\": false,\n            \"subscription_details\": []\n        },\n        \"client_token\": \"1|NSphM1GhjUGxJdyOJ2y3RTm7Qf1glUpk8OfViUzS0be8fc7e\"\n    }\n}"
+						},
+						{
+							"name": "Has plan",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "device_uuid",
+											"value": "1234",
+											"contentType": "",
+											"description": "string uuid",
+											"type": "text"
+										},
+										{
+											"key": "device_name",
+											"value": "Example-device-name",
+											"description": "string name",
+											"type": "text"
+										}
+									]
+								},
+								"url": "{{base_url}}/api/auth"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 31 Mar 2024 11:41:14 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 31 Mar 2024 11:41:14 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.20"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"code\": 200,\n    \"message\": \"User device information processed successfully.\",\n    \"data\": {\n        \"user_info\": {\n            \"id\": 1,\n            \"device_uuid\": \"1234\",\n            \"device_name\": \"Example-device-name\",\n            \"subscription_status\": true,\n            \"subscription_details\": [\n                {\n                    \"id\": 1,\n                    \"user_id\": 1,\n                    \"product_id\": 1,\n                    \"product_name\": \"Basic\",\n                    \"chat_credit\": 100,\n                    \"start_date\": \"2024-03-31 11:41:11\",\n                    \"end_date\": \"2024-03-31 11:41:11\",\n                    \"status\": 1\n                }\n            ]\n        },\n        \"client_token\": \"2|FYICHl5xRFVkQ3Hld8Mccr3xAa342aTUuwJ9CDnQ545c5d12\"\n    }\n}"
+						},
+						{
+							"name": "VALIDATE ERROR",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "device_uuid",
+											"value": "1234",
+											"contentType": "",
+											"description": "string uuid",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "device_name",
+											"value": "Example-device-name",
+											"description": "string name",
+											"type": "text"
+										}
+									]
+								},
+								"url": "{{base_url}}/api/auth"
+							},
+							"status": "Unprocessable Content",
+							"code": 422,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 31 Mar 2024 13:47:22 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 31 Mar 2024 13:47:22 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.20"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": false,\n    \"code\": 422,\n    \"message\": \"Validation Error\",\n    \"data\": {\n        \"device_uuid\": [\n            \"The device uuid field is required.\"\n        ]\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Subscription",
+			"item": [
+				{
+					"name": "subscription purchase",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "productId",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "receiptToken",
+									"value": "6146ccf6a66d994f7c363db875e31ca35581450a4bf6d3be6cc9ac79233a6920",
+									"description": "son hanesi çift ise true",
+									"type": "text"
+								}
+							]
+						},
+						"url": "{{base_url}}/api/subscription"
+					},
+					"response": [
+						{
+							"name": "TRUE",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "productId",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "receiptToken",
+											"value": "6146ccf6a66d994f7c363db875e31ca35581450a4bf6d3be6cc9ac79233a6920",
+											"description": "son hanesi çift ise true",
+											"type": "text"
+										}
+									]
+								},
+								"url": "{{base_url}}/api/subscription"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 31 Mar 2024 13:36:22 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 31 Mar 2024 13:36:22 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.20"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"code\": 200,\n    \"message\": \"Subscription purchased successfully.\",\n    \"data\": {\n        \"subscription_status\": \"positive\"\n    }\n}"
+						},
+						{
+							"name": "FALSE (Invalid receipt token)",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "productId",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "receiptToken",
+											"value": "6146ccf6a66d994f7c363db875e31ca35581450a4bf6d3be6cc9ac79233a692",
+											"description": "son hanesi çift ise true",
+											"type": "text"
+										}
+									]
+								},
+								"url": "{{base_url}}/api/subscription"
+							},
+							"status": "Unprocessable Content",
+							"code": 422,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 31 Mar 2024 13:34:56 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 31 Mar 2024 13:34:56 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.20"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": false,\n    \"code\": 422,\n    \"message\": \"Invalid receipt token\",\n    \"data\": {\n        \"subscription_status\": \"negative\"\n    }\n}"
+						},
+						{
+							"name": "VALIDATE ERROR",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "productId",
+											"value": "1",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "receiptToken",
+											"value": "6146ccf6a66d994f7c363db875e31ca35581450a4bf6d3be6cc9ac79233a6920",
+											"description": "son hanesi çift ise true",
+											"type": "text"
+										}
+									]
+								},
+								"url": "{{base_url}}/api/subscription"
+							},
+							"status": "Unprocessable Content",
+							"code": 422,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 31 Mar 2024 13:46:59 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 31 Mar 2024 13:46:59 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.20"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": false,\n    \"code\": 422,\n    \"message\": \"Validation Error\",\n    \"data\": {\n        \"productId\": [\n            \"The product id field is required.\"\n        ]\n    }\n}"
+						},
+						{
+							"name": "Has Plans",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "productId",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "receiptToken",
+											"value": "6146ccf6a66d994f7c363db875e31ca35581450a4bf6d3be6cc9ac79233a6920",
+											"description": "son hanesi çift ise true",
+											"type": "text"
+										}
+									]
+								},
+								"url": "{{base_url}}/api/subscription"
+							},
+							"status": "Unprocessable Content",
+							"code": 422,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 31 Mar 2024 21:21:28 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 31 Mar 2024 21:21:28 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.20"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "57"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": false,\n    \"code\": 422,\n    \"message\": \"User already has an active subscription. If you want to continue, please visit the subscription change page.\",\n    \"data\": {\n        \"subscription_status\": \"negative\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Info",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": "{{base_url}}/api/subscription/info"
+					},
+					"response": [
+						{
+							"name": "TRUE",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": "{{base_url}}/api/subscription/info"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 31 Mar 2024 13:37:23 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 31 Mar 2024 13:37:23 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.20"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"code\": 200,\n    \"message\": \"Subscription information retrieved successfully.\",\n    \"data\": [\n        {\n            \"id\": 1,\n            \"user_id\": 1,\n            \"product_id\": 1,\n            \"product_name\": \"Basic\",\n            \"chat_credit\": 20,\n            \"start_date\": \"2024-03-31 13:36:22\",\n            \"end_date\": \"2024-03-31 13:36:22\",\n            \"status\": 1\n        }\n    ]\n}"
+						},
+						{
+							"name": "FALSE",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": "{{base_url}}/api/subscription/info"
+							},
+							"status": "Unprocessable Content",
+							"code": 422,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 31 Mar 2024 23:10:11 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 31 Mar 2024 23:10:11 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.20"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": false,\n    \"code\": 422,\n    \"message\": \"User does not have an active subscription.\",\n    \"data\": []\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Chat",
+			"item": [
+				{
+					"name": "Chat lists",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": "{{base_url}}/api/chat/list"
+					},
+					"response": [
+						{
+							"name": "TRUE",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": "{{base_url}}/api/chat/list"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 31 Mar 2024 13:46:32 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 31 Mar 2024 13:46:32 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.20"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "55"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"code\": 200,\n    \"message\": \"Chat information retrieved successfully.\",\n    \"data\": [\n        {\n            \"id\": 2,\n            \"user_id\": 1,\n            \"chat_name\": \"Merhaba bot :)\",\n            \"code\": \"660968c6d1dc1\",\n            \"is_active\": 0,\n            \"created_at\": \"2024-03-31T13:44:38.000000Z\",\n            \"last_five_message\": [\n                {\n                    \"id\": 3,\n                    \"chat_id\": 2,\n                    \"user_message\": \"Merhaba bot :)\",\n                    \"bot_reply\": \"How may I help you?\"\n                },\n                {\n                    \"id\": 2,\n                    \"chat_id\": 2,\n                    \"user_message\": \"Merhaba bot :)\",\n                    \"bot_reply\": \"I'm here to assist you.\"\n                }\n            ]\n        },\n        {\n            \"id\": 3,\n            \"user_id\": 1,\n            \"chat_name\": \"Merhaba bot :)\",\n            \"code\": \"660968ca18b86\",\n            \"is_active\": 1,\n            \"created_at\": \"2024-03-31T13:44:42.000000Z\",\n            \"last_five_message\": [\n                {\n                    \"id\": 6,\n                    \"chat_id\": 3,\n                    \"user_message\": \"Merhaba bot :)\",\n                    \"bot_reply\": \"This is a sample response from the bot.\"\n                },\n                {\n                    \"id\": 5,\n                    \"chat_id\": 3,\n                    \"user_message\": \"Merhaba bot :)\",\n                    \"bot_reply\": \"This is a sample response from the bot.\"\n                },\n                {\n                    \"id\": 4,\n                    \"chat_id\": 3,\n                    \"user_message\": \"Merhaba bot :)\",\n                    \"bot_reply\": \"What can I do for you?\"\n                }\n            ]\n        }\n    ]\n}"
+						},
+						{
+							"name": "FALSE",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": "{{base_url}}/api/chat/list"
+							},
+							"status": "Unprocessable Content",
+							"code": 422,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 31 Mar 2024 23:05:02 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 31 Mar 2024 23:05:02 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.20"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": false,\n    \"code\": 422,\n    \"message\": \"User does not have any chat.\",\n    \"data\": {}\n}"
+						}
+					]
+				},
+				{
+					"name": "Chat",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "chatId",
+									"value": "5",
+									"type": "text"
+								},
+								{
+									"key": "message",
+									"value": "Merhaba bot ggg) b2323",
+									"type": "text"
+								}
+							]
+						},
+						"url": "{{base_url}}/api/chat"
+					},
+					"response": [
+						{
+							"name": "VALIDATE ERROR",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "chatId",
+											"value": "3",
+											"type": "text"
+										},
+										{
+											"key": "message",
+											"value": "Merhaba bot :)",
+											"type": "text"
+										}
+									]
+								},
+								"url": "{{base_url}}/api/chat"
+							},
+							"status": "Unprocessable Content",
+							"code": 422,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 31 Mar 2024 13:45:41 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 31 Mar 2024 13:45:41 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.20"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": false,\n    \"code\": 422,\n    \"message\": \"Validation Error\",\n    \"data\": {\n        \"chatId\": [\n            \"The chat id field is required.\"\n        ]\n    }\n}"
+						},
+						{
+							"name": "TRUE",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "chatId",
+											"value": "3",
+											"type": "text"
+										},
+										{
+											"key": "message",
+											"value": "Merhaba bot :)",
+											"type": "text"
+										}
+									]
+								},
+								"url": "{{base_url}}/api/chat"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 31 Mar 2024 13:46:06 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 31 Mar 2024 13:46:06 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.20"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "57"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"code\": 200,\n    \"message\": \"Chat information retrieved successfully.\",\n    \"data\": {\n        \"botResponse\": \"This is a sample response from the bot.\"\n    }\n}"
+						}
+					]
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": {
+			"token": "1|7ncHBWkZ4otZ0T5489dkeYRKoFcDg3t6XQpFKgnxa5a85a5d"
+		}
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://127.0.0.1:8000",
+			"type": "string"
+		}
+	]
+}
