@@ -24,4 +24,5 @@ Route::namespace('App\Http\Controllers\Web')->prefix('admin')->middleware(['auth
     Route::get('users','HomeController@userList')->name('users.list');
     Route::get('users/{detail}','HomeController@userDetail')->name('users.detail');
     Route::get('subscriptions','HomeController@subscriptions')->name('subscriptions.list');
+    Route::get('logout',  'AuthController@logout')->name('admin.panel.logout');
 });

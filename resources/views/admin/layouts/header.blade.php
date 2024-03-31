@@ -11,8 +11,7 @@
 
     @yield('style')
 
-    <!-- App css -->
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font/css/materialdesignicons.min.css">
 
 
 </head>
@@ -46,8 +45,8 @@
                     </a>
                     <div class="dropdown-menu dropdown-menu-right">
                         <div class="dropdown-divider"></div>
-                        {{-- <a class="dropdown-item" href="{{route('admin.panel.logout')}}"><i class="dripicons-exit text-muted mr-2"></i> Çıkış
-                            Yap</a> --}}
+                        <a class="dropdown-item" href="{{route('admin.panel.logout')}}"><i class="dripicons-exit text-muted mr-2"></i> Çıkış
+                            Yap</a>
                     </div>
                 </li>
             </ul>
@@ -64,9 +63,9 @@
                 <div class="media-body">
                     <h5 class="text-light text-left"> </h5>
                     <ul class="list-unstyled list-inline mb-0 mt-2">
-                        {{-- <li class="list-inline-item">
+                        <li class="list-inline-item">
                             <a href="{{route('admin.panel.logout')}}" class=""><i class="mdi mdi-power text-danger"></i></a>
-                        </li> --}}
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -74,21 +73,7 @@
             <div class="row">
                 <div class="col-sm-12">
                     <div class="page-title-box">
-                        <h4 class="page-title mb-2"><i class="mdi mdi-monitor mr-2"></i>Yönetim Paneli</h4>
-                        <div class="">
-                            <ol class="breadcrumb">
-                                <li class="breadcrumb-item active"><a href="{{ route('admin.index') }}">Yönetim Paneli Anasayfa</a></li>
-                                @if (!request()->is('admin/panel'))
-                                    <li class="breadcrumb-item active"><a href="javascript:void(0);" onclick="goBack()">Geri</a></li>
-                                @endif
-                            </ol>
-
-                            <script>
-                                function goBack() {
-                                    window.history.back();
-                                }
-                            </script>
-                        </div>
+                        <h4 class="page-title mb-2">Yönetim Paneli</h4>
                     </div>
                 </div>
             </div>
@@ -105,14 +90,14 @@
                 <ul class="metismenu left-sidenav-menu" id="side-nav">
 
                     <li>
-                        <a href="{{ route('admin.index') }}"><i class="mdi mdi-monitor"></i><span>Home</span></a>
+                        <a href="{{ route('admin.index') }}"><span>Home</span></a>
                     </li>
 
                     <li class="menu-title">Users and Subscriptions</li>
 
                     <li>
-                        <a href="javascript: void(0);"><i class="mdi mdi-apps"></i><span>Users and Subscriptions </span><span
-                                class="menu-arrow"><i class="mdi mdi-chevron-right"></i></span></a>
+                        <a href="javascript: void(0);"><span>Users and Subscriptions </span><span
+                                class="menu-arrow"><i class="bi bi-record"></i></span></a>
                         <ul class="nav-second-level" aria-expanded="false">
                             <li><a href="{{ route('users.list') }}"><span>Users</span></a></li>
                             <li><a href="{{ route('subscriptions.list') }}"><span>Subscriptions</span></a></li>

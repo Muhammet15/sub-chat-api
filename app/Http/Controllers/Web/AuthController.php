@@ -33,4 +33,13 @@ class AuthController extends Controller
              return redirect()->back()->with('error', 'Geçersiz kimlik bilgileri');
          }
      }
+     public function logout(Request $request)
+     {
+              if (Auth::check()) {
+                  $request->user()->tokens()->delete();
+                  Auth::logout();
+              }
+
+              return redirect()->route('admin.login.form');
+     }
 }
